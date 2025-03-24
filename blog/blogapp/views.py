@@ -5,8 +5,8 @@ from django.shortcuts import render, HttpResponse
 # def home(index):
 #     return HttpResponse("This is the Home Page")
 
-def bloghome(index):
-    return HttpResponse('This is the blog home page page')
+def bloghome(request):
+    return render (request, 'blog/bloghome.html')
 
 def blogpost(request, slug):
-    return HttpResponse(f'This is blog post: {slug}')
+    return render (request, 'blog/blogpost.html')
